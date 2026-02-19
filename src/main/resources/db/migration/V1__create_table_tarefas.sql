@@ -1,8 +1,8 @@
-CREATE TABLE tarefa
-(
+CREATE TABLE tarefa (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    titulo    VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
     descricao TEXT NOT NULL,
-    local     VARCHAR(255) NOT NULL,
-    data_hora DATETIME    NOT NULL
+    local VARCHAR(255) NOT NULL,
+    data_hora DATETIME NOT NULL
 );
+

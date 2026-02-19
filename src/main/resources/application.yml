@@ -6,10 +6,10 @@ spring:
     properties:
       hibernate:
         default_schema: curso-database
-  generate-ddl: true
-  hibernate:
-    ddl-auto: validate
-  open-in-view: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: validate
+    open-in-view: true
 
   datasource:
     url: jdbc:mysql://localhost:3306/curso-database?allowPublicKeyRetrieval=true&useSSL=false

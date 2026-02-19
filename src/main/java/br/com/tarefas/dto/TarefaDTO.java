@@ -3,18 +3,17 @@ package br.com.tarefas.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
-@Getter
-@Setter
+@Data
 public class TarefaDTO {
 
     private Long id;
     /*
-    Notblank deve tratar casos de String como exemplo:
+    Notblank deve tratar casos de Striing como exemplo:
     Nulo - titulo = null;
     Vázio- titulo = "";
     Em branco - titulo = " ";
@@ -31,4 +30,12 @@ public class TarefaDTO {
 
     @NotNull(message = "Data e hora são obrigatórios")
     private LocalDateTime dataHora;
+
+    @NotNull(message = "Nenhum convidado foi selecionado")
+    private List<ConvidadoDTO> convidados;
+
+    private List<ConvidadoPendenteDTO> convidadoPendente;
+
+    @NotNull
+    private UsuarioDTO criador;
 }
